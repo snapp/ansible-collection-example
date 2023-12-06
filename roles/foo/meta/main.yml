@@ -1,0 +1,43 @@
+---
+# https://docs.ansible.com/ansible/latest/galaxy/user_guide.html#using-meta-main-yml
+
+galaxy_info:
+  # NOTE: The namespace of the role.
+  namespace: "snapp"
+
+  # NOTE: The name of the role..
+  role_name: "foo"
+
+  # NOTE: A short summary description of the role.
+  description: "This role provides ..."
+
+  # NOTE: The company claiming ownership of the role.
+  # company: ""
+
+  # NOTE: A list of the role's content authors.
+  author: "snapp@redhat.com"
+
+  # NOTE: The license for content inside of a role.
+  license: "GPL-3.0-or-later"
+
+  # NOTE: The minimum Ansible version.
+  min_ansible_version: ">=2.15.0"
+
+  # NOTE: The list of supported platforms
+  platforms:
+    - name: EL
+      versions:
+        - "8"
+        - "9"
+  # NOTE: A list of tags (20 max) you want to associate with the role for indexing/searching.
+  galaxy_tags:
+    - "application"
+
+# NOTE: The list of role dependencies
+# dependencies:
+#   - role: foo
+#     vars:
+#       foo_variable1: 3
+#   - role: bar
+#     vars:
+#       bar_variable1: 'example'

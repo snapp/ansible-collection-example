@@ -1,0 +1,23 @@
+---
+# https://ansible.readthedocs.io/projects/molecule/podman/#config-playbook
+
+dependency:
+  name: galaxy
+  options:
+    requirements-file: requirements.yml
+
+driver:
+  name: default
+  options:
+    managed: false
+    login_cmd_template: "podman exec -ti {instance} bash"
+    ansible_connection_options:
+      ansible_connection: podman
+
+# NOTE: modify the list of containers for molecule to test on
+# https://ansible.readthedocs.io/projects/molecule/configuration/#platforms
+platforms:
+  - name: ubi8
+    image: registry.access.redhat.com/ubi8/ubi-init:latest
+  - name: ubi9
+    image: registry.access.redhat.com/ubi9/ubi-init:latest

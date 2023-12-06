@@ -1,0 +1,8 @@
+---
+# NOTE: foo Default Playbook
+
+- name: Run snapp.example.foo # noqa: role-name[path]
+  hosts: "{{ target | default('all') }}"
+  gather_facts: false
+  roles:
+    - ../roles/foo

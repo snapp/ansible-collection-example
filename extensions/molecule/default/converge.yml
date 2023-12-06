@@ -1,0 +1,8 @@
+---
+# https://ansible.readthedocs.io/projects/molecule/configuration/#molecule.provisioner.ansible.Ansible.converge
+
+- name: Converge snapp.example.foo
+  ansible.builtin.import_playbook: snapp.example.foo
+  vars:
+    ansible_become_method: su
+    target: molecule
